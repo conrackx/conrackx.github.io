@@ -1,0 +1,10 @@
+{% extends "page.njk" %}
+{% set page_title = "Contacto" %}
+{% block content %}
+<p>Abierto a colaboraciones, proyectos freelance y oportunidades de Data Analyst con foco en automatización e IA.</p>
+<div style="display: grid; gap: var(--space-md); margin-top: var(--space-lg);">
+<a href="mailto:{{ site.author.email }}" class="button" style="justify-content: center;">Enviar email</a>
+<a href="{{ site.social.linkedin }}" target="_blank" rel="noopener" class="button button-ghost" style="justify-content: center;">LinkedIn {% icon "external-link" %}</a>
+<a href="{{ site.social.github }}" target="_blank" rel="noopener" class="button button-ghost" style="justify-content: center;">GitHub {% icon "external-link" %}</a>
+</div>
+{% endblock %}

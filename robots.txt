@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+Disallow: /_site/
+
+Sitemap: https://usuario.github.io/marca-personal/sitemap.xml

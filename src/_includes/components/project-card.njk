@@ -1,0 +1,7 @@
+<article class="card">
+  <h3><a href="{{ project.url }}" style="color: var(--fg); border: none;">{{ project.data.title }}</a></h3>
+  {% if project.data.subtitle %}<p style="color: var(--muted);">{{ project.data.subtitle }}</p>{% endif %}
+  <div class="project-meta">{% if project.data.stack %}{{ project.data.stack | join(", ") }}{% endif %}</div>
+  {% if project.data.featured %}<span class="tag" style="margin-top: var(--space-xs); display: inline-block;">Destacado</span>{% endif %}
+  <div style="margin-top: var(--space-sm);"><a href="{{ project.url }}" class="button button-ghost">Ver caso de estudio →</a></div>
+</article>

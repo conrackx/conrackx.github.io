@@ -1,0 +1,33 @@
+{% extends "base.njk" %}
+{% block head %}
+{{ super() }}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "{{ title }}",
+  "datePublished": "{{ date | readableDate }}",
+  "dateModified": "{{ date | readableDate }}",
+  "author": {
+    "@type": "Person",
+    "name": "{{ site.author.name }}"
+  },
+  "url": "{{ site.url }}{{ page.url }}"
+}
+</script>
+{% endblock %}
+{% block content %}
+<article class="container-narrow">
+  <header class="page-header">
+    <h1>{{ title }}</h1>
+    <div class="post-meta">
+      <time datetime="{{ date }}">{{ date | readableDate }}</time>
+      <span class="reading-time">{{ content | readingTime }} min lectura</span>
+    </div>
+  </header>
+  <div class="post-body">
+    {{ content | safe }}
+  </div>
+
+</article>
+{% endblock %}

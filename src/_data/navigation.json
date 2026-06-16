@@ -1,0 +1,7 @@
+[
+  { "text": "Inicio", "href": "/" },
+  { "text": "Sobre mí", "href": "/pages/about/" },
+
+  { "text": "Charlas", "href": "/pages/speaking/" },
+  { "text": "Contacto", "href": "/pages/contact/" }
+]

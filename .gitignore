@@ -1,0 +1,16 @@
+# Example: activate the virtual environment before installing
+# python -m venv venv
+# venv\Scripts\activate  (Windows)
+# source venv/bin/activate  (macOS/Linux)
+# pip install -r requirements.txt
+node_modules/
+_site/
+.cache/
+.DS_Store
+Thumbs.db
+*.log
+.env
+.env.local
+.vscode/
+.idea/
+*.bak.*

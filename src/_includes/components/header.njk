@@ -1,0 +1,17 @@
+<header class="site-header">
+<nav class="container flex justify-between items-center py-sm">
+<a href="/" class="font-semibold" style="font-size: var(--text-lg); letter-spacing: -0.02em; border: none; color: var(--fg);">
+<span class="text-accent">/</span>CKX
+</a>
+<button id="menu-toggle" class="menu-toggle" aria-expanded="false" aria-controls="primary-nav" aria-label="Abrir menú">
+<svg class="icon" style="width:1.5em; height:1.5em;"><use href="/assets/icons/sprite.svg#menu"></use></svg>
+</button>
+<ul id="primary-nav" class="nav-list">
+{% for item in navigation %}
+<li>
+<a href="{{ item.href }}" class="nav-link {% if page.url == item.href %}active{% endif %}" {% if page.url == item.href %}aria-current="page"{% endif %}>{{ item.text }}</a>
+</li>
+{% endfor %}
+</ul>
+</nav>
+</header>

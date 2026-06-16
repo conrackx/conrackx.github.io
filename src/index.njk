@@ -1,0 +1,33 @@
+{% extends "base.njk" %}
+{% block content %}
+{% include "components/hero.njk" %}
+
+<section class="section-y">
+<div class="container">
+<h2 class="section-title">{% icon "code" %} Lo que construyo</h2>
+<p class="text-muted measure-lg mb-md">
+Pipelines de datos que integran IA sin depender ciegamente de servicios externos, con testing exhaustivo y reglas de negocio configuradas, no hardcodeadas.
+</p>
+<div class="grid grid-3">
+<div class="card proof-point">
+<div class="icon-large">{% icon "database" %}</div>
+<h3>Pipelines ETL declarativos</h3>
+<p class="text-muted">7 etapas con artefactos intermedios verificables.</p>
+<p class="text-accent text-stat">~15 min</p>
+</div>
+<div class="card proof-point">
+<div class="icon-large">{% icon "brain" %}</div>
+<h3>IA Pragmática</h3>
+<p class="text-muted">Modelos con fallback determinístico.</p>
+<p class="text-accent text-stat">200+ tests</p>
+</div>
+<div class="card proof-point">
+<div class="icon-large">{% icon "shield" %}</div>
+<h3>Sin jerarquía en los datos</h3>
+<p class="text-muted">Fusión multi-origen tolerante a fallos.</p>
+<p class="text-accent text-stat">5 JSON + 3 CSV</p>
+</div>
+</div>
+</div>
+</section>
+{% endblock %}

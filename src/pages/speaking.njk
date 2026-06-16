@@ -1,0 +1,28 @@
+{% extends "page.njk" %}
+{% set page_title = "Charlas" %}
+{% set description = "Conferencias y workshops sobre pipelines de datos, IA y automatización." %}
+{% block content %}
+{% if collections.speaking.length %}
+<div style="display: grid; gap: var(--space-lg);">
+  {% for talk in collections.speaking %}
+  <article class="card">
+    <div style="display: flex; justify-content: space-between; align-items: start; flex-wrap: wrap; gap: var(--space-sm);">
+      <div style="flex: 1 1 300px;">
+        <h2 style="margin-bottom: var(--space-xs);"><a href="{{ talk.url }}" style="border: none; color: inherit;">{{ talk.data.title }}</a></h2>
+        <p style="color: var(--muted);">{{ talk.data.event }} · {{ talk.data.date | readableDate }}</p>
+        {% if talk.data.duration %}
+        <p style="color: var(--muted); font-size: var(--text-sm);">Duración: {{ talk.data.duration }}</p>
+        {% endif %}
+        <p style="margin-top: var(--space-sm);">{{ talk.data.audience }}</p>
+        {% if talk.data.slides and talk.data.slides != 'pending' %}
+        <a href="{{ talk.data.slides }}" target="_blank" rel="noopener" class="button button-ghost" style="margin-top: var(--space-sm);">Ver slides</a>
+        {% endif %}
+      </div>
+    </div>
+  </article>
+  {% endfor %}
+</div>
+{% else %}
+<p style="color: var(--muted);">No hay charlas programadas por el momento.</p>
+{% endif %}
+{% endblock %}

@@ -1,0 +1,16 @@
+<header class="hero">
+<div class="container">
+<div class="flex gap-lg items-start flex-wrap">
+<div style="flex: 1 1 320px;">
+<p class="text-muted font-mono text-sm mb-xs">Hola, soy</p>
+<h1 class="mb-sm">{{ site.author.name }}</h1>
+<p class="subtitle">{{ site.description }}</p>
+<p class="text-lg measure-lg mb-lg">{{ content | safe }}</p>
+
+</div>
+<div style="flex: 0 0 auto;">
+{% image "assets/images/perfil.png", site.author.name, [200, 400], "(max-width: 768px) 200px, 400px", "profile-img" %}
+</div>
+</div>
+</div>
+</header>

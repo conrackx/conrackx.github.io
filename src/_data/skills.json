@@ -1,0 +1,35 @@
+[
+  {
+    "category": "Data Analysis",
+    "items": [
+      { "name": "SQL", "level": "Avanzado", "evidence": "Consultas complejas multi-tabla, optimización de índices, ETL en base de datos Aurora." },
+      { "name": "Python", "level": "Avanzado", "evidence": "Pipelines ETL, pytest (200+ tests unitarios, integración), pandas, scripts automatizados." },
+      { "name": "Power BI / DAX", "level": "Avanzado", "evidence": "Dashboards interactivos, modelos tabulares, métricas de negocio en tiempo real." },
+      { "name": "Excel Avanzado", "level": "Avanzado", "evidence": "Macros, Power Query, modelos financieros." }
+    ]
+  },
+  {
+    "category": "Data Engineering",
+    "items": [
+      { "name": "ETL Pipelines", "level": "Intermedio", "evidence": "Pipeline 7 etapas declarativas: Extracción → Consolidación → Análisis → Narrativas → Gráficos → Ensamblado → Validación." },
+      { "name": "JSON / APIs", "level": "Intermedio", "evidence": "Fusión de 5 archivos JSON Aurora + 3 CSV sin jerarquía, trazabilidad total vía plan intermedio." },
+      { "name": "Git / CI-CD", "level": "Intermedio", "evidence": "200+ tests automatizados, quality gates en pipeline, despliegue confiable." }
+    ]
+  },
+  {
+    "category": "IA Aplicada",
+    "items": [
+      { "name": "LLM / Prompts", "level": "Intermedio", "evidence": "Diseño de prompts que convierten métricas estructuradas en narrativas accionables (EDR, coverage, recomendaciones)." },
+      { "name": "IA Pragmática", "level": "Avanzado", "evidence": "Modo determinístico con fallback stub: el pipeline NUNCA falla por dependencia de IA externa." },
+      { "name": "Validación de IA", "level": "Intermedio", "evidence": "Tests automáticos de longitud, tono, palabras clave riesgo, consistencia contra métricas reales." }
+    ]
+  },
+  {
+    "category": "Negocio & Comunicación",
+    "items": [
+      { "name": "Reportes Automatizados", "level": "Avanzado", "evidence": "7 clientes en producción, ~15 min end-to-end (antes: días), 8 secciones estándar, 6 gráficos automáticos." },
+      { "name": "Reglas como Código", "level": "Intermedio", "evidence": "Motor de riesgo 7-dimensiones externalizado en JSON: analistas modifican reglas sin tocar pipeline." },
+      { "name": "Comunicación Técnica", "level": "Avanzado", "evidence": "Charla técnica 30-40 min para estudiantes, case studies." }
+    ]
+  }
+]

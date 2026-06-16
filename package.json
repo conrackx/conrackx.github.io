@@ -1,0 +1,26 @@
+{
+  "name": "marca-personal",
+  "version": "1.0.0",
+  "type": "module",
+  "description": "Sitio personal — Data Analyst · IA en producción",
+  "engines": {
+    "node": ">=18 <27"
+  },
+  "scripts": {
+    "dev": "npx @11ty/eleventy --serve",
+    "build": "npx @11ty/eleventy",
+    "build:prod": "cross-env NODE_ENV=production npx @11ty/eleventy",
+    "lint": "npx htmlhint _site/**/*.html"
+  },
+  "devDependencies": {
+    "@11ty/eleventy": "^3.1.6",
+    "@11ty/eleventy-img": "^6.0.4",
+    "@11ty/eleventy-plugin-rss": "^3.0.0",
+    "@11ty/eleventy-plugin-syntaxhighlight": "^5.0.2",
+    "cross-env": "^10.1.0",
+    "html-minifier-terser": "^7.2.0",
+    "markdown-it": "^14.2.0",
+    "markdown-it-anchor": "^9.2.0",
+    "markdown-it-toc-done-right": "^4.2.0"
+  }
+}

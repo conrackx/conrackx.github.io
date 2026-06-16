@@ -1,0 +1,36 @@
+{% extends "base.njk" %}
+{% block head %}
+{{ super() }}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Project",
+  "name": "{{ title }}",
+  "description": "{{ description }}",
+  "datePublished": "{{ date | readableDate }}",
+  "author": {
+    "@type": "Person",
+    "name": "{{ site.author.name }}"
+  },
+  "url": "{{ site.url }}{{ page.url }}"
+}
+</script>
+{% endblock %}
+{% block content %}
+<article class="container-narrow">
+  <header class="page-header">
+    <p class="tag" style="display: inline-block; margin-bottom: var(--space-sm);">Proyecto</p>
+    <h1>{{ title }}</h1>
+    {% if subtitle %}<p class="subtitle" style="color: var(--muted); font-size: 1.2em;">{{ subtitle }}</p>{% endif %}
+    <div class="post-meta">
+      <time datetime="{{ date }}">{{ date | readableDate }}</time>
+      <span class="reading-time">{{ content | readingTime }} min lectura</span>
+      {% if stack %}<span style="margin-left: var(--space-sm);">{{ stack | join(", ") }}</span>{% endif %}
+    </div>
+  </header>
+  <div class="post-body">
+    {{ content | safe }}
+  </div>
+
+</article>
+{% endblock %}

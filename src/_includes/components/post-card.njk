@@ -1,0 +1,11 @@
+<article class="card" style="margin-bottom: var(--space-md);">
+  <h3 style="margin-bottom: 0.3em;"><a href="{{ post.url }}" style="color: var(--fg); border: none;">{{ post.data.title }}</a></h3>
+  <div class="post-meta">
+    <time datetime="{{ post.date }}">{{ post.date | readableDate }}</time>
+    <span class="reading-time">{{ post.templateContent | readingTime }} min</span>
+  </div>
+  <p style="color: var(--muted); margin-top: var(--space-xs);">{{ post.templateContent | excerpt }}</p>
+  <div style="margin-top: var(--space-sm);">
+    {% for tag in post.data.tags %}<span class="tag">{{ tag }}</span>{% endfor %}
+  </div>
+</article>
